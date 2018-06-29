@@ -1,0 +1,44 @@
+  
+  
+  Case 1.  Call FM_FIND_MIN to find a relative minimum between 1 and 2
+           for f(x) = X**3 - 9*X + 17.
+           Use KPRT = 0, so no output will be done in the routine, then
+           write the results from the main program.
+
+  A minimum for function 1 is
+      x =    1.7320508073117460E+00,   f(x) =    6.6076951545867360E+00
+  
+  
+  Case 2.  Find a relative maximum between -5 and 1.
+           Use KPRT = 1, so FM_FIND_MIN will print the results.
+  
+  FM_FIND_MIN.   Function   1    12 iterations.  A relative maximum on interval
+                -5.0000000000E+00    to     1.0000000000E+00  is
+                 x = -1.7320508059817132E+00,   f(x) =  2.7392304845413264E+01
+  
+  
+  
+  Case 3.  Find a relative maximum between -5 and 5.
+           Use KPRT = 2, so FM_FIND_MIN will print all iterations,
+           as well as the final results.
+  
+  FM_FIND_MIN.  Begin trace of all iterations.
+                Search for a relative maximum on the interval
+                -5.0000000000E+00    to     5.0000000000E+00
+
+      J =  1    X =  -1.1803398874989490E+00    F(X) =   2.5978606800437433E+01
+      J =  2    X =   1.1803398874989477E+00    F(X) =   8.0213931995625725E+00
+      J =  3    X =  -2.6393202250021028E+00    F(X) =   2.2368347645024219E+01
+      J =  4    X =  -1.4410524493997141E+00    F(X) =   2.6976936181159068E+01
+      J =  5    X =  -1.6746424834205833E+00    F(X) =   2.7375369005904350E+01
+      J =  6    X =  -1.7563668929907292E+00    F(X) =   2.7389218128504055E+01
+      J =  7    X =  -1.7328958134121955E+00    F(X) =   2.7392301134575852E+01
+      J =  8    X =  -1.7319129362489554E+00    F(X) =   2.7392304746644818E+01
+      J =  9    X =  -1.7320524430471902E+00    F(X) =   2.7392304845399366E+01
+      J = 10    X =  -1.7320507964707692E+00    F(X) =   2.7392304845413264E+01
+      J = 11    X =  -1.7320508272473911E+00    F(X) =   2.7392304845413264E+01
+  
+  FM_FIND_MIN.   Function   1    11 iterations.  A relative maximum on interval
+                -5.0000000000E+00    to     5.0000000000E+00  is
+                 x = -1.7320508272473911E+00,   f(x) =  2.7392304845413264E+01
+  

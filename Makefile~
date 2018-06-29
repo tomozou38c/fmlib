@@ -1,0 +1,27 @@
+OBJS1 = fmsave.o fmzm90.o fm.o
+OBJS2 = TestFM.o SampleFM.o
+OBJS = $(OBJS1) $(OBJS2)
+SRCS = fmsave.f95 fmzm90.f95 fm.f95 TestFM.f95 SampleFM.f95
+FMLIB = libfmlib.a
+PROGS = TestFM SampleFM
+FC = gfortran-4.7
+FFLAGS = -O
+
+.SUFFIXES: .f90 .o
+	.f90.o:
+	$(FC) $(FFLAGS) -c $<
+
+all: $(PROGS)
+
+fmlib.a: $(OBJS1)
+	ar cr $@ $(OBJS1
+	ranlib $@
+
+TestFM: TestFM.o fmlib.a
+	$(FC) $(FFLAGS) -o $@ TestFM.o fmlib.a
+
+SampleFM: SampleFM.o fmlib.a
+	$(FC) $(FFLAGS) -o $@ SampleFM.o fmlib.a
+
+test: TestFM
+	./TestFM
